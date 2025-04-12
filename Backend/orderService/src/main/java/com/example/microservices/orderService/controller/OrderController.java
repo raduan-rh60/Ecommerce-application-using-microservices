@@ -20,6 +20,6 @@ public class OrderController {
     @PostMapping("/save")
     public ResponseEntity<String> placeOrder(@RequestBody OrderDTO order){
         orderServices.postOrder(order);
-        return new ResponseEntity<>("Order Placed Successful", HttpStatus.OK);
+        return new ResponseEntity<>("Order Save Successfully", HttpStatus.OK);
     }
 }
