@@ -27,7 +27,6 @@ public class OrderServices {
             saveData.setQuantity(order.getQuantity());
             saveData.setPrice(order.getPrice());
             saveData.setSKUCode(order.getSkuCode());
-            System.out.println(order);
             orderRepo.save(saveData);
         }else {
            throw new RuntimeException("Product with SKU Code "+order.getSkuCode().trim()+" Is out of Stock");
